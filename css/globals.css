@@ -1,0 +1,60 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: "Quicksand", sans-serif;
+	color: #273b47;
+	font-size: 1.6rem;
+	text-rendering: optimizeLegibility;
+	line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	line-height: normal;
+}
+
+h1 {
+	font-size: 3.2rem;
+}
+h2 {
+	font-size: 2.8rem;
+}
+h3 {
+	font-size: 2.4rem;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+input,
+button,
+textarea,
+select,
+optgroup,
+a {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	font: inherit;
+}
+
+button {
+	cursor: pointer;
+}
