@@ -1,0 +1,44 @@
+header {
+	width: 100%;
+	height: 16rem;
+	margin-bottom: 4rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+main {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+}
+
+main section {
+	grid-column: 2 / 12;
+}
+
+main section,
+main section article {
+	margin-bottom: 4rem;
+	display: flex;
+	flex-direction: column;
+}
+
+main section article {
+	padding: 0 0 2rem;
+	background-color: snow;
+	border-radius: 2.4rem;
+	overflow: hidden;
+}
+
+main section article img {
+	margin-bottom: 4rem;
+}
+
+main section button {
+	width: 20rem;
+	margin: 0 auto;
+	padding: 1.2rem;
+	border: none;
+	border-radius: 1.2rem;
+	font-weight: bold;
+}

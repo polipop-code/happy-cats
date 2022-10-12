@@ -10,13 +10,26 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap" rel="stylesheet" />
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="./css/globals.css" />
+		<link rel="stylesheet" href="./css/main.css" />
 	</head>
 	<body>
-		<header></header>
+		<header>
+			<h1>Happy Cats</h1>
+		</header>
 		<main>
-			<section>
-				<img alt="" />
+			<section class="sample">
+				<article>
+					<img id="catI" alt="" />
+					<button>Save on favorites</button>
+				</article>
 				<button onclick="reload()">New cat 🤍</button>
+			</section>
+			
+			<section class="favorites">
+				<p>Favorites here</p>
 			</section>
 		</main>
 		<footer></footer>

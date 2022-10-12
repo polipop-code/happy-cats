@@ -7,12 +7,8 @@ async function reload() {
 
 	console.log(data);
 
-	const img1 = document.getElementById("cat1");
-	img1.src = data[0].url;
-	const img2 = document.getElementById("cat2");
-	img2.src = data[1].url;
-	const img3 = document.getElementById("cat3");
-	img3.src = data[2].url;
+	const img = document.getElementById("catI");
+	img.src = data[0].url;
 }
 
 reload();
