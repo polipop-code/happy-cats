@@ -40,7 +40,8 @@ main > section {
 
 .saveCat,
 .newCat,
-.deleteCat {
+.deleteCat,
+.uploadCat form button {
 	width: 20rem;
 	margin: 0 auto;
 	padding: 1.2rem;
@@ -53,14 +54,18 @@ main > section {
 
 .saveCat:hover,
 .newCat:hover,
-.deleteCat:hover {
+.deleteCat:hover,
+.uploadCat form input::file-selector-button:hover,
+.uploadCat form button:hover {
 	transform: translateY(-0.2rem);
 	box-shadow: 0 0.12rem rgba(0, 0, 0, 0.2);
 }
 
 .saveCat:active,
 .newCat:active,
-.deleteCat:active {
+.deleteCat:active,
+.uploadCat form input::file-selector-button:active,
+.uploadCat form button:active {
 	transform: translateY(0.2rem);
 	box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
 }
@@ -81,4 +86,38 @@ main > section {
 	main > section {
 		grid-column: 4 / 10;
 	}
+}
+
+/* Upload section */
+/* Challenge, create a tumbnail section */
+.uploadCat {
+	margin-bottom: 4rem;
+	padding: 2rem;
+	background-color: #fffffc;
+	border-radius: 2.4rem;
+	box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	text-align: center;
+}
+
+.uploadCat form {
+	display: flex;
+	flex-direction: column;
+}
+
+.uploadCat form input {
+	padding: 2rem 0;
+}
+
+.uploadCat form input::file-selector-button {
+	padding: 1.2rem;
+	border: none;
+	border-radius: 2rem;
+	background-color: paleturquoise;
+	transition: all 0.12s ease-out;
+	cursor: pointer;
+	font-size: 1.4rem;
+}
+
+.uploadCat form button {
+	background-color: paleturquoise;
 }

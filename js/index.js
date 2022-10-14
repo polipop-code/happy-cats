@@ -6,6 +6,8 @@ const API_URL_FAVORITES = "https://api.thecatapi.com/v1/favourites";
 const API_URL_FAVORITES_DELETE = (id) =>
 	`https://api.thecatapi.com/v1/favourites/${id}?api_key=live_SJRWUOWTVzkAH2ucWp5vyDdj9qiHF6WgnSBTRWH3ecjvHJRSzEF3PnqsChqlL5Jp`;
 
+const API_URL_UPLOAD = "https://api.thecatapi.com/v1/images/upload";
+
 // -------------------------------------------------- Load a new cat
 async function newCat() {
 	const res = await fetch(API_URL_RANDOM);
@@ -100,6 +102,35 @@ async function deleteFavorite(id) {
 		alert("Something is wrong: " + res.status + ", " + data.message);
 	} else {
 		loadFavoriteCats();
+	}
+}
+
+// -------------------------------------------------- Upload a new cat
+async function uploadCatPicture() {
+	const form = document.getElementById("uploadingForm");
+	const formData = new FormData(form);
+
+	console.log(formData.get("file"));
+
+	const res = await fetch(API_URL_UPLOAD, {
+		method: "POST",
+		headers: {
+			// "Content-Type": "multipart/form_data",
+			"X-API-KEY": "live_SJRWUOWTVzkAH2ucWp5vyDdj9qiHF6WgnSBTRWH3ecjvHJRSzEF3PnqsChqlL5Jp",
+		},
+		body: formData,
+	});
+
+	const data = await res.json();
+
+	if (res.status !== 201) {
+		alert("Something is wrong: " + res.status + ", " + data.message);
+		console.log({ data });
+	} else {
+		console.log("Photo uploaded successfully");
+		console.log({ data });
+		console.log(data.url);
+		newFavoriteCat(data.id);
 	}
 }
 
